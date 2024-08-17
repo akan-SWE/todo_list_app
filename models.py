@@ -4,8 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-class Tasks(db.Model):
-    __tablename__ = 'tasks'
+class Task(db.Model):
+    __tablename__ = 'Todos'
 
     id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
     title = db.Column(db.String(100), nullable=False)
