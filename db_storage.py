@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
 
-from models import TASKS
+from models import Task
 
 class DBStorage:
 
 
     def get(self, task_id):
-        task = TODOS.query.get(task_id)
+        task = Task.query.get(task_id)
         return task
 
     def delete(self, task_id):
